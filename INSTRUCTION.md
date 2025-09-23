@@ -56,9 +56,16 @@
 
 ## 5. How to Access the App After Deployment
 
+- Check todoapp pod name:
+  kubectl get pods -l app=todoapp -n mateapp
 - Execute port-forward to access the app pod:
-  kubectl port-forward pod/todoapp 8000:8080
+  kubectl port-forward pod/<pod-name> 8000:8080
 - Go to the app page via browser:
   localhost:8000/ 
 
-**Note:** Update `deployment.yml` and `hpa.yml` with your image name and any environment variables as needed.
+## 6. List of actions and their commands to track deployment state:
+ - kubectl get ns mateapp
+ - kubectl get deployments -n mateapp
+ - kubectl get pods -n mateapp -l app=todoapp
+ - kubectl get hpa -n mateapp
+ - kubectl rollout status deployment/todoapp -n mateapp
