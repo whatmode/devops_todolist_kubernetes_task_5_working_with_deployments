@@ -20,10 +20,10 @@
 ## 2. Resource Requests and Limits
 
 - **Requests:**
-  - Memory: `250Mi`
+  - Memory: `128Mi`
   - CPU: `250m` (0.25 core)
 - **Limits:**
-  - Memory: `500Mi`
+  - Memory: `256Mi`
   - CPU: `500m` (0.5 core)
   
 
